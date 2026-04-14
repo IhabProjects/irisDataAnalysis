@@ -105,7 +105,7 @@ def predictOnValidationDataSet():
     X_train, X_Validation, Y_train, Y_Validation = splitDataSet()
     model = SVC(gamma="auto")
     model.fit(X_train, Y_train)
-    model.predict(X_Validation)
+
     predictions = model.predict(X_Validation)
     # Evaluate predictions
     print(accuracy_score(Y_Validation, predictions))
